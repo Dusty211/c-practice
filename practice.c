@@ -5,7 +5,7 @@
 int main() {
 
   // unsigned char str[100];
-  long double str[100];
+  char str[100];
   char output_chars[] = "0123456789abcdefjhijklmnopqrstuvwxwzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   char output_hash[100];
   int i;
@@ -13,7 +13,7 @@ int main() {
 
   printf("\nEnter a string to hash, bro: ");
   scanf("%[^\n]%*c", &str);
-  printf("Your hash before: %s \n", (char)str);
+  printf("Your hash before: %s \n", str);
 
   for(i = 0; i < strlen(str); i++ ) {
     output_hash[i] = output_chars[str[i] * str[i] % 9 * str[i] * str[i] % 62];
