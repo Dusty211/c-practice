@@ -5,9 +5,9 @@
 int main() {
 
   // unsigned char str[100];
-  char str[100];
+  char str[200];
   char output_chars[] = "0123456789abcdefjhijklmnopqrstuvwxwzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  char output_hash[100];
+  char output_hash[200];
   int i;
 
 
