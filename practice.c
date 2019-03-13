@@ -12,7 +12,7 @@ int main() {
 
 
   printf("\nEnter a string to hash, bro: ");
-  scanf("%[^\n]%*c", &str);
+  scanf("%[^\n]%*c", str);
   printf("Your hash before: %s \n", str);
 
   for(i = 0; i < strlen(str); i++ ) {
