@@ -2,7 +2,7 @@
 #include <string.h>
 #include <math.h>
 
-int return_floats(char *input);
+int * return_ints(char *input);
 
 int main() {
 
@@ -10,34 +10,37 @@ int main() {
   char str[200];
   char output_chars[] = "0123456789abcdefjhijklmnopqrstuvwxwzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   char output_hash[200];
+  // char output_hash2[200];
   int i;
-  int new_array;
+  int *new_array;
 
 
   printf("\nEnter a string to hash, bro: ");
   scanf("%[^\n]%*c", str);
-  printf("Your hash before: %s \n", str);
+  printf("Your hash before: %s \n\n", str);
 
   for(i = 0; i < strlen(str); i++ ) {
     //char type sucks for this - only 256 values:
     output_hash[i] = output_chars[str[i] * str[i] % 9 * str[i] * str[i] % 62];
 
-    //for debugging:
-    printf("Output_hash index %i = %d \n", i, output_hash[i]);
+    //for debugging: -not needed anymore
+    // printf("Output_hash index %i = %d \n", i, output_hash[i]);
   }
 
   //with char types:
-  printf("\nOutput_hash: %s \n", output_hash);
+  printf("\nOutput_hash (old shitty char-type function): %s \n\n", output_hash);
 
   //function using bigger types - not working as expected
   //not getting intended return from function
-  new_array = return_floats(str);
-  printf("new_array: %d \n", new_array);
+  new_array = return_ints(str);
+
+
+  printf("new_array: %d \n", new_array[2]);
 
   return 0;
 }
 
-int return_floats(char *input) {
+int * return_ints(char *input) {
 
   int i;
   int int_out[200];
@@ -51,5 +54,5 @@ int return_floats(char *input) {
     // printf("for_math[i] %i = %lld \n", i, for_math[i]);
 
   }
-  return *int_out;
+  return int_out;
 }
