@@ -28,14 +28,17 @@ int main() {
   }
 
   //with char types:
-  printf("\nOutput_hash (old shitty char-type function): %s \n\n", output_hash);
+  printf("\nOutput_hash (old ghetto char-type function): %s \n\n", output_hash);
 
   //function using bigger types - not working as expected
   //not getting intended return from function
   new_array = return_ints(str);
 
+  // printf("\nnew hash: %s \n\n", return_ints(str));
 
-  printf("new_array: %d \n", new_array[2]);
+
+  // printf("new_array: %d \n", new_array[2]);
+  printf("new_array: %d \n", new_array[25]);
 
   return 0;
 }
