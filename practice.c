@@ -20,6 +20,7 @@ int main() {
   for(i = 1; i < new_array[0] + 1; i++ ) {
     printf("%c", output_chars[new_array[i]]);
   }
+  free(new_array);
 
   return 0;
 }
